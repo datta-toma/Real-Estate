@@ -1,12 +1,13 @@
-import { useContext } from "react";
+
 import { Link } from "react-router-dom";
-import { AuthContext } from "../../FirebaseProvider/FirebaseProvider";
 import { useForm } from "react-hook-form";
-import Result from "postcss/lib/result";
+// import Result from "postcss/lib/result";
+import SocialLogin from "./SocialLogin";
+import useAuth from "../../hooks/useAuth";
 
 const Register = () => {
 
-    const {createUser} = useContext(AuthContext);
+    const {createUser} = useAuth();
     
     const {
         register,
@@ -81,6 +82,7 @@ const Register = () => {
                 Please Login
                 </Link>
               </label>
+              <SocialLogin></SocialLogin>
             </form>
           </div>
         </div>
