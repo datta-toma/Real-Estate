@@ -1,6 +1,7 @@
 import { Link, NavLink } from 'react-router-dom';
 import logo from '../../assets/logo img.jpg';
 import useAuth from '../../hooks/useAuth';
+import { useState } from 'react';
 
 
 const Navbar = () => {
@@ -14,8 +15,9 @@ const Navbar = () => {
     const {logout, user} = useAuth()
     console.log(user)
 
+
     return (
-        <div className="navbar bg-base-100 mt-7">
+        <div className="navbar   bg-sky-100 p-8 rounded-lg">
         <div className="navbar-start">
           <div className="dropdown">
             <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -36,26 +38,39 @@ const Navbar = () => {
         </div>
 
 
-       <div className="navbar-end">
+       <div className="navbar-end ">
         {
-          user? <div className="dropdown dropdown-end">
-          <label tabIndex={0} className="btn btn-ghost btn-circle avatar">
+          user? <div className=" flex   gap-3 dropdown dropdown-end">
+          <label tabIndex={0} className="btn btn-ghost btn-circle avatar tooltip  tooltip-left" data-tip={user.email}>
               <div className="w-10 rounded-full">
-                  <img src={user?.photoURL || "https://i.ibb.co/y0yrnYQ/1681283571946.jpg" } />
+                  <img src={user?.photoURL || "https://i.postimg.cc/c4RMWFc4/unnamed.png" } />
+
+                  <button className="btn">Left</button>
+
+
+          
+
               </div>
+              
           </label>
-          <ul tabIndex={0} className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
+          <div>
+          <button
+                      onClick={logout}
+                      className="btn btn-sm  btn-glass">Logout</button>
+          </div>
+          
+           {/* <ul tabIndex={0} className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
               <li>
-                  <button className="btn btn-sm  btn-ghost">{user?.displayName||'user name not found'}</button>
+                  <button className="btn btn-sm  btn-ghost">{user.email}</button>
 
               </li>
               <li>
                   <button
                       onClick={logout}
-                      className="btn btn-sm  btn-ghost">Logout</button>
+                      className="btn btn-sm  btn-glass">Logout</button>
 
               </li>
-          </ul>
+          </ul>  */}
       </div>
           :
           <Link to='/login'>

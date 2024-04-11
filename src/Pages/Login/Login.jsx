@@ -3,9 +3,14 @@ import { Link } from "react-router-dom";
 import { useForm } from "react-hook-form";
 import useAuth from "../../hooks/useAuth";
 import SocialLogin from "./SocialLogin";
+import Swal from "sweetalert2";
+import { useState } from "react";
+
 
 const Login = () => {
-  const {signInUser} = useAuth()
+  const {signInUser} = useAuth();
+  const [error, setError] = useState(null);
+ 
 
       const {
         register,
@@ -15,19 +20,27 @@ const Login = () => {
       const onSubmit = (data) => {
         const {email, password} = data;
 
-      signInUser(email, password)
-      .then(result =>{
-        console.log(result.user);
-      })
+          signInUser(email, password)
+          .then(result =>{
+            console.log(result.user);
+          })
+    
+          .catch(error =>{
+            console.log(error)
+            // Show error message using SweetAlert
+         Swal.fire({
+          icon: 'error',
+          title: 'Oops...',
+          text: 'Email and password do not match!',
+        });
+          })
 
-      .catch(error =>{
-        console.log(error)
-      })
-      }
+        
+      };
 
 
     return (
-        <div className="hero mt-20">
+        <div className="hero mt-4 bg-sky-100">
   <div className="hero-content flex-col lg:flex-row-reverse">
   
   

@@ -37,7 +37,7 @@ const Register = () => {
                 <input type="text" placeholder="Full Name" className="input input-bordered" required 
                 {...register("FullName", { required: true })}
                  />
-                  {errors.FullName && <span className="text-red-500">This field is required</span>}
+                  {errors.FullName && <span>This field is required</span>}
 
               </div>
               <div className="form-control">
