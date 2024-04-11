@@ -6,7 +6,7 @@ import slide3 from "../../assets/slide4.jpg"
 
 const Banner = () => {
     return (
-        <div className="carousel w-full ">
+        <div className="carousel w-full mt-14 ">
         <div id="slide1" className="carousel-item relative w-full">
           <img src={slide} className="w-full md:h-3/4 rounded-lg" />
           <div className="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
