@@ -4,10 +4,13 @@ import { useForm } from "react-hook-form";
 // import Result from "postcss/lib/result";
 import SocialLogin from "./SocialLogin";
 import useAuth from "../../hooks/useAuth";
+import Swal from "sweetalert2";
+import { useState } from "react";
 
 const Register = () => {
 
     const {createUser} = useAuth();
+    const [error, setError] = useState(null);
     
     const {
         register,
@@ -19,6 +22,13 @@ const Register = () => {
         createUser(email, password)
         .then(result =>{
           console.log(result);
+          console.log(error)
+          // Show success message using SweetAlert
+       Swal.fire({
+        icon: 'success',
+        title: 'Success',
+        text: 'Login successfully!',
+      });
         })
       } 
 
