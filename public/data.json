@@ -1,0 +1,82 @@
+[
+    {
+        "image": "https://i.postimg.cc/mghSWsDQ/royal.jpg",
+        "estate_title": "Royal Palace Hotel",
+        "id": 1,
+        "segment_name": "Luxury Accommodation",
+        "description": "Indulge in the opulence of the Royal Palace Hotel, where luxury meets elegance. From lavish suites to exquisite dining experiences, every moment is designed to exceed your expectations. Experience unparalleled comfort and impeccable service in the heart of the city.",
+        "price": "$500 per night",
+        "status": "Rent",
+        "area": "3000 sq ft",
+        "location": "Downtown Metropolis, New York",
+        "facilities": ["Spa", "Fitness Center", "Swimming Pool", "Fine Dining"]
+      },
+      
+    {
+        "image": "https://i.postimg.cc/pdfhgGDf/brevard-the-sunset-motel-image-10.jpg",
+        "estate_title": "Sunset Motel",
+        "id": 2,
+        "segment_name": "Budget Accommodation",
+        "description": "Welcome to the Sunset Motel, where comfort meets affordability. Our cozy rooms are perfect for travelers seeking a convenient and budget-friendly stay. Located just minutes away from the beach, enjoy a relaxing retreat without breaking the bank.",
+        "price": "$80 per night",
+        "status": "Rent",
+        "area": "400 sq ft",
+        "location": "Coastal Town, California",
+        "facilities": ["Free Wi-Fi", "Parking", "24/7 Front Desk"]
+    },
+
+        {
+            "image": "https://i.postimg.cc/qRgr8gMN/Santa-Barbara-Beach-and-Golf-Resort-Curacao-1.jpg",
+            "estate_title": "Tropical Paradise Resort",
+            "id": 3,
+            "segment_name": "Luxury Resort",
+            "description": "Escape to the ultimate paradise at the Tropical Paradise Resort. Nestled along the pristine coastline, our resort offers unparalleled luxury and relaxation. Immerse yourself in the beauty of lush gardens, crystal-clear waters, and world-class amenities.",
+            "price": "$800 per night",
+            "status": "Rent",
+            "area": "5000 sq ft",
+            "location": "Tropical Island, Caribbean",
+            "facilities": ["Private Beach", "Infinity Pool", "Spa & Wellness Center", "Gourmet Restaurants"]
+          },
+          {
+            "image": "https://i.postimg.cc/Sxsp0JCD/5385-Soneva-Fushi-3-Bedroom-Beach-Retreat-with-Pool-Villa-9-1600x900.jpg",
+            "estate_title": "Seaside Villa Retreat",
+            "id": 4,
+            "segment_name": "Beachfront Vacation Rental",
+            "description": "Experience the ultimate beach getaway at Seaside Villa Retreat. Our luxurious vacation rental offers breathtaking ocean views and direct access to the pristine sandy shores. Relax in style and comfort while enjoying the tranquility of coastal living.",
+            "price": "$300 per night",
+            "status": "Rent",
+            "area": "2500 sq ft",
+            "location": "Oceanfront, California",
+            "facilities": ["Ocean View Terrace", "Private Beach Access", "Hot Tub", "Fully Equipped Kitchen"]
+          },
+          {
+            "image": "https://i.postimg.cc/hvp3M1yg/Kinloch-Wilderness-Retreat-Hostel-Glenorchy-Exterior.jpg",
+            "estate_title": "Wilderness Retreat Lodge",
+            "id": 5,
+            "segment_name": "Nature Lodge",
+            "description": "Escape to the serenity of Wilderness Retreat Lodge, nestled in the heart of nature. Immerse yourself in the beauty of towering trees and tranquil surroundings. Our lodge offers rustic charm combined with modern amenities for a truly rejuvenating experience.",
+            "price": "$200 per night",
+            "status": "Rent",
+            "area": "1800 sq ft",
+            "location": "Forest Reserve, Montana",
+            "facilities": ["Cozy Fireplace", "Outdoor Patio", "Hiking Trails", "Fully Equipped Kitchen"]
+          },
+          {
+            "image": "https://i.postimg.cc/bJ6QBVh6/64432006.jpg",
+            "estate_title": "Tranquil Haven Guesthouse",
+            "id": 6,
+            "segment_name": "Cozy Guesthouse",
+            "description": "Welcome to Tranquil Haven Guesthouse, your home away from home. Nestled in a quiet neighborhood, our guesthouse offers a peaceful retreat for travelers seeking comfort and relaxation. Experience warm hospitality and a cozy atmosphere during your stay.",
+            "price": "$100 per night",
+            "status": "Rent",
+            "area": "1200 sq ft",
+            "location": "Suburban Area, Oregon",
+            "facilities": ["Private Patio", "Garden View", "Complimentary Breakfast", "Free Wi-Fi"]
+          }
+          
+          
+          
+          
+      
+      
+]

@@ -18,7 +18,7 @@ const Navbar = () => {
 
 
     return (
-        <div className="navbar Nav-contain  p-8 rounded-lg">
+        <div className="navbar Nav-contain p-3  rounded-lg">
         <div className="navbar-start">
           <div className="dropdown">
             <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -43,14 +43,11 @@ const Navbar = () => {
         {
           user? <div className=" flex   gap-3 dropdown dropdown-end">
           <label tabIndex={0} className="btn btn-ghost btn-circle avatar tooltip  tooltip-left" data-tip={user.email}>
+
               <div className="w-10 rounded-full">
-                  <img src={user?.photoURL || "https://i.postimg.cc/c4RMWFc4/unnamed.png" } />
+                  <img src={user?.photoURL && "https://i.postimg.cc/c4RMWFc4/unnamed.png" } />
 
                   <button className="btn">Left</button>
-
-
-          
-
               </div>
               
           </label>

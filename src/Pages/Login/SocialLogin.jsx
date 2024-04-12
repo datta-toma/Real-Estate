@@ -2,8 +2,11 @@ import useAuth from "../../hooks/useAuth";
 import { FcGoogle } from "react-icons/fc";
 import { ImGithub } from "react-icons/im";
 
+
 const SocialLogin = () => {
-    const {googleLogin, githubLogin} = useAuth()
+    const {googleLogin, githubLogin} = useAuth();
+
+
     return (
         <div>
             <div className="text-center">Continue with</div>
@@ -11,6 +14,7 @@ const SocialLogin = () => {
                 <button onClick={() =>googleLogin()}><FcGoogle className="text-3xl  ">Google</FcGoogle></button>
                 <button onClick={() =>githubLogin()}> <ImGithub className="text-3xl">GitHub</ImGithub></button>
             </div>
+
         </div>
     );
 };
