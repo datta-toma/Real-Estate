@@ -6,6 +6,7 @@ import SocialLogin from "./SocialLogin";
 import useAuth from "../../hooks/useAuth";
 import Swal from "sweetalert2";
 import { useState } from "react";
+import "./Login.css";
 
 const Register = () => {
 
@@ -34,9 +35,9 @@ const Register = () => {
 
 
     return (
-        <div className="hero mt-20">
+        <div className="hero  SinIn-container">
         <div className="hero-content flex-col lg:flex-row-reverse">
-          <div className="card shrink-0 w-full max-w-sm shadow-2xl bg-base-100">
+          <div className="card shrink-0 w-full max-w-sm shadow-2xl bg-base-100 mt-10">
             <form onSubmit={handleSubmit(onSubmit)} className="card-body">
 
             <div className="form-control">

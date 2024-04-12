@@ -7,7 +7,7 @@ const Root = () => {
     return (
         <div>
             <Navbar></Navbar>
-            {/* <FirebaseProvider></FirebaseProvider> */}
+           
             <Outlet></Outlet>
         </div>
     );

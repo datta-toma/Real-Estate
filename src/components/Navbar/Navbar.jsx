@@ -2,6 +2,7 @@ import { Link, NavLink } from 'react-router-dom';
 import logo from '../../assets/logo img.jpg';
 import useAuth from '../../hooks/useAuth';
 import { useState } from 'react';
+import "./Nav.css";
 
 
 const Navbar = () => {
@@ -17,7 +18,7 @@ const Navbar = () => {
 
 
     return (
-        <div className="navbar   bg-sky-100 p-8 rounded-lg">
+        <div className="navbar Nav-contain  p-8 rounded-lg">
         <div className="navbar-start">
           <div className="dropdown">
             <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
