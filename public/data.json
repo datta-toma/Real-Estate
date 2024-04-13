@@ -1,10 +1,10 @@
 [
     {
-        "image": "https://i.postimg.cc/mghSWsDQ/royal.jpg",
+        "image": "https://i.postimg.cc/d17ZGBxb/images.jpg",
         "estate_title": "Royal Palace Hotel",
         "id": 1,
         "segment_name": "Luxury Accommodation",
-        "description": "Indulge in the opulence of the Royal Palace Hotel, where luxury meets elegance. From lavish suites to exquisite dining experiences, every moment is designed to exceed your expectations. Experience unparalleled comfort and impeccable service in the heart of the city.",
+        "description": "Indulge in the opulence of the Royal Palace Hotel, where luxury meets elegance. From lavish suites to exquisite dining experiences, every moment is designed to exceed your expectations. comfort and impeccable service in the heart of the city.",
         "price": "$500 per night",
         "status": "Rent",
         "area": "3000 sq ft",
@@ -13,7 +13,7 @@
       },
       
     {
-        "image": "https://i.postimg.cc/pdfhgGDf/brevard-the-sunset-motel-image-10.jpg",
+        "image": "https://i.postimg.cc/3Rr32Jfz/expediav2-266813-57a618-295651.jpg",
         "estate_title": "Sunset Motel",
         "id": 2,
         "segment_name": "Budget Accommodation",
@@ -26,11 +26,11 @@
     },
 
         {
-            "image": "https://i.postimg.cc/qRgr8gMN/Santa-Barbara-Beach-and-Golf-Resort-Curacao-1.jpg",
+            "image": "https://i.postimg.cc/8PpnDfJ2/tropical-paradise-beach-white-sand-600nw-1201599862.webp",
             "estate_title": "Tropical Paradise Resort",
             "id": 3,
             "segment_name": "Luxury Resort",
-            "description": "Escape to the ultimate paradise at the Tropical Paradise Resort. Nestled along the pristine coastline, our resort offers unparalleled luxury and relaxation. Immerse yourself in the beauty of lush gardens, crystal-clear waters, and world-class amenities.",
+            "description": "Escape to the ultimate paradise at the Tropical Paradise Resort. Nestled along the pristine coastline, our resort offers unparalleled luxury and relaxation. Immerse yourself in the beauty of lush gardens,crystal-clear waters and world-class amenities.",
             "price": "$800 per night",
             "status": "Rent",
             "area": "5000 sq ft",
@@ -38,7 +38,7 @@
             "facilities": ["Private Beach", "Infinity Pool", "Spa & Wellness Center", "Gourmet Restaurants"]
           },
           {
-            "image": "https://i.postimg.cc/Sxsp0JCD/5385-Soneva-Fushi-3-Bedroom-Beach-Retreat-with-Pool-Villa-9-1600x900.jpg",
+            "image": "https://i.postimg.cc/TP5T94TJ/20220923-235406jpg-1600-750.jpg",
             "estate_title": "Seaside Villa Retreat",
             "id": 4,
             "segment_name": "Beachfront Vacation Rental",
@@ -50,7 +50,7 @@
             "facilities": ["Ocean View Terrace", "Private Beach Access", "Hot Tub", "Fully Equipped Kitchen"]
           },
           {
-            "image": "https://i.postimg.cc/hvp3M1yg/Kinloch-Wilderness-Retreat-Hostel-Glenorchy-Exterior.jpg",
+            "image": "https://i.postimg.cc/FKpVTDG1/Luxury-Log-Mountain-Retreat.jpg",
             "estate_title": "Wilderness Retreat Lodge",
             "id": 5,
             "segment_name": "Nature Lodge",
@@ -62,7 +62,7 @@
             "facilities": ["Cozy Fireplace", "Outdoor Patio", "Hiking Trails", "Fully Equipped Kitchen"]
           },
           {
-            "image": "https://i.postimg.cc/bJ6QBVh6/64432006.jpg",
+            "image": "https://i.postimg.cc/25RJdTGP/the-haven-hotel-and-spa.jpg",
             "estate_title": "Tranquil Haven Guesthouse",
             "id": 6,
             "segment_name": "Cozy Guesthouse",

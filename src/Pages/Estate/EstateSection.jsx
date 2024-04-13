@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const EstateSection = ({estate}) => {
   const {id, image, estate_title, description, price, status} = estate;
@@ -12,12 +13,14 @@ const EstateSection = ({estate}) => {
     <h2 className="card-title">{ estate_title}</h2>
     <p className='text-start'>{description}</p>
     <div className='flex gap-5'>
-    <p> Price: {price}</p>
-    <p className='border p-2 rounded-lg'>{status}</p>
+    
     </div>
     
     <div className="card-actions">
-      <button className="btn btn-primary">Buy Now</button>
+      <Link to={`/estate/${id}`}>
+      <button className="btn btn-primary">View Property</button>
+      </Link>
+    
     </div>
   </div>
 </div>

@@ -41,7 +41,7 @@ const Register = () => {
             <form onSubmit={handleSubmit(onSubmit)} className="card-body">
 
             <div className="form-control">
-            <h1 className="text-3xl font-bold">Sing In</h1>
+            <h1 className="text-3xl font-bold text-center">Sing Up</h1>
                 <label className="label">
                   <span className="label-text">Full Name</span>
                 </label>
@@ -85,7 +85,7 @@ const Register = () => {
 
               </div>
               <div className="form-control mt-6">
-                <button className="btn btn-primary">Sing In</button>
+                <button className="btn btn-primary">Sing Up</button>
               </div>
               <label>
                 Have an account? {""}

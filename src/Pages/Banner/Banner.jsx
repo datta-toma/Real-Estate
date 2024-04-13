@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
-// import 'animate.css'; 
 import './banner.css';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 import slide from "../../assets/slide1.jpg";
 import slide1 from "../../assets/slide2.jpg";
@@ -19,10 +20,14 @@ const Banner = () => {
         return () => clearInterval(interval);
     }, [slides.length]);
 
+    useEffect(() => {
+        AOS.init();
+    }, []);
+
 
     return (
         <div >
-        <div className="carousel-item relative w-full  animate__animated animate__fadeIn">
+        <div className="carousel-item relative w-full  animate__animated animate__fadeIn" data-aos="fade-up">
             <div className="w-screen  rounded-lg">
             <img src={slides[currentSlide]} className='lg:w-full lg:h-4/5'  />
             </div>

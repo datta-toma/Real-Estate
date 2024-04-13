@@ -29,7 +29,7 @@ const Navbar = () => {
             </ul>
           </div>
           <img className='w-24' src={logo} alt=''></img>
-          <a className="btn btn-ghost text-3xl">Crowny</a>
+          <a className="btn btn-ghost text-4xl font-extrabold">Crowny</a>
         </div>
         <div className="navbar-center hidden lg:flex">
           <ul className="menu menu-horizontal px-1">
@@ -45,7 +45,8 @@ const Navbar = () => {
           <label tabIndex={0} className="btn btn-ghost btn-circle avatar tooltip  tooltip-left" data-tip={user.email}>
 
               <div className="w-10 rounded-full">
-                  <img src={user?.photoURL && "https://i.postimg.cc/c4RMWFc4/unnamed.png" } />
+                  <img src={user?.photoURL || "https://i.postimg.cc/c4RMWFc4/unnamed.png" } />
+                
 
                   <button className="btn">Left</button>
               </div>
@@ -57,18 +58,6 @@ const Navbar = () => {
                       className="btn btn-sm  btn-glass">Logout</button>
           </div>
           
-           {/* <ul tabIndex={0} className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
-              <li>
-                  <button className="btn btn-sm  btn-ghost">{user.email}</button>
-
-              </li>
-              <li>
-                  <button
-                      onClick={logout}
-                      className="btn btn-sm  btn-glass">Logout</button>
-
-              </li>
-          </ul>  */}
       </div>
           :
           <Link to='/login'>
