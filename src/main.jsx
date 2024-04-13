@@ -13,6 +13,8 @@ import FirebaseProvider from './FirebaseProvider/FirebaseProvider.jsx';
 import Home from './Pages/Home/Home.jsx';
 import Register from './Pages/Login/Register.jsx';
 import EstateDetails from './Pages/Estate/EstateDetails.jsx';
+import UpdateProfile from './Pages/UpdateProfile/UpdateProfile.jsx';
+import About from './Pages/About/About.jsx';
 
 const router = createBrowserRouter([
   {
@@ -35,7 +37,16 @@ const router = createBrowserRouter([
         path:"/estate/:id",
         loader: ()=> fetch('/data.json'),
         element:<EstateDetails></EstateDetails>
-      }
+      },
+      {
+        path:'/about',
+        element:<About></About>
+      },
+      {
+        path:'/update',
+        element:<UpdateProfile></UpdateProfile>
+      },
+
       
     ]
 

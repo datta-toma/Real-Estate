@@ -1,6 +1,6 @@
 import { useLoaderData, useParams } from "react-router-dom";
-
-
+import { useEffect } from "react";
+import AOS from 'aos';
 const EstateDetails = () => {
     const details = useLoaderData();
     const {id} = useParams();
@@ -8,13 +8,18 @@ const EstateDetails = () => {
     const detail = details.find((detail) => detail.id === idInt);
     // const {estate_title} = detail;
     console.log(detail)
+
+    useEffect(() => {
+        // Initialize AOS when the component mounts
+        AOS.init();
+    }, []);
    
     return (
         <div className="flex flex-col lg:flex-row justify-center max-w-7xl gap-12 mx-auto mt-10">
-            <div className=" mt-28 ">
+            <div className=" mt-28" data-aos="fade-right">
                 <img className="h-1/2" src={detail.image} alt="img"></img>
             </div>
-            <div className="mt-28 space-y-3">
+            <div className="mt-28 space-y-3" data-aos="fade-left">
                 <h2 className="text-5xl font-medium">{detail.estate_title}</h2>
                 <p className="mt-3 text-2xl font-medium"> {detail.segment_name}</p>
                 <p className=" font-normal w-72">{detail.description}</p>
