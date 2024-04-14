@@ -15,11 +15,16 @@ import Register from './Pages/Login/Register.jsx';
 import EstateDetails from './Pages/Estate/EstateDetails.jsx';
 import UpdateProfile from './Pages/UpdateProfile/UpdateProfile.jsx';
 import About from './Pages/About/About.jsx';
+import PrivateRoute from './components/PrivateRoute/PrivateRoute.jsx';
+import ContactUs from './Pages/ContactUs/ContactUs.jsx';
+import ErrorPage from './components/ErrorPage/ErrorPage.jsx';
+import { HelmetProvider } from 'react-helmet-async';
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <Root></Root>,
+    errorElement:<ErrorPage></ErrorPage>,
     children:[
       {
         path:"/",
@@ -36,7 +41,10 @@ const router = createBrowserRouter([
       {
         path:"/estate/:id",
         loader: ()=> fetch('/data.json'),
-        element:<EstateDetails></EstateDetails>
+        element:<PrivateRoute>
+          <EstateDetails></EstateDetails>
+        </PrivateRoute>
+        // element:<EstateDetails></EstateDetails>
       },
       {
         path:'/about',
@@ -46,6 +54,10 @@ const router = createBrowserRouter([
         path:'/update',
         element:<UpdateProfile></UpdateProfile>
       },
+      {
+        path:'/contact',
+        element:<PrivateRoute><ContactUs></ContactUs></PrivateRoute>
+      }
 
       
     ]
@@ -56,7 +68,9 @@ const router = createBrowserRouter([
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode> 
     <FirebaseProvider>
-    <RouterProvider router={router} />
+    <HelmetProvider>
+      <RouterProvider router={router} />
+    </HelmetProvider>
     </FirebaseProvider>
   </React.StrictMode>,
 )

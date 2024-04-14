@@ -1,13 +1,19 @@
+import { Helmet } from "react-helmet-async";
 import { FaSquareFacebook, FaInstagram  } from "react-icons/fa6";
+
 
 const About = () => {
     return (
-        <div className="mt-10">
-             <h2 className="text-center text-4xl font-bold ">Here is a tribute to good life!</h2>
+       <div>
+        <Helmet>
+            <title>About Us</title>
+        </Helmet>
+         <div className="mt-10">
+             <h2 className="text-center text-4xl font-bold " data-aos="fade-up">Here is a tribute to good life!</h2>
             <div className="flex flex-col md:flex-row gap-10 justify-center mt-20">
                
 
-                <div>
+                <div data-aos="fade-right">
                 <div className="h-96 carousel carousel-vertical rounded-box ">
                 <div className="carousel-item h-full">
                         <img src="https://i.postimg.cc/MHVz2z4z/img-4.avif" />
@@ -30,7 +36,7 @@ const About = () => {
                      </div>
                 </div>
                
-               <div>
+               <div data-aos="fade-left">
                 <p className="font-medium text-xl">We Conduct Lots Of Events &<br></br> Functions.<br></br>
                     We Will Keep You Posted</p>
                     <div className="flex gap-2 mt-5">
@@ -44,6 +50,7 @@ const About = () => {
              
             </div>
         </div>
+       </div>
     );
 };
 

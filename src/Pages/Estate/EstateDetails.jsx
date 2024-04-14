@@ -1,6 +1,7 @@
 import { useLoaderData, useParams } from "react-router-dom";
 import { useEffect } from "react";
 import AOS from 'aos';
+import { Helmet } from "react-helmet-async";
 const EstateDetails = () => {
     const details = useLoaderData();
     const {id} = useParams();
@@ -15,7 +16,11 @@ const EstateDetails = () => {
     }, []);
    
     return (
-        <div className="flex flex-col lg:flex-row justify-center max-w-7xl gap-12 mx-auto mt-10">
+        <div>
+            <Helmet>
+                <title>Estate Details</title>
+            </Helmet>
+            <div className="flex flex-col lg:flex-row justify-center max-w-7xl gap-12 mx-auto mt-10">
             <div className=" mt-28" data-aos="fade-right">
                 <img className="h-1/2" src={detail.image} alt="img"></img>
             </div>
@@ -36,6 +41,7 @@ const EstateDetails = () => {
                     
                 </div>
             </div>
+        </div>
         </div>
     );
 };

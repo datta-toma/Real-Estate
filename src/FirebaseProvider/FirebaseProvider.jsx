@@ -11,10 +11,12 @@ import { useEffect } from "react";
 
 const FirebaseProvider = ({children}) => {
     const [user, setUser] = useState(null)
-   console.log(user)
+    
+    const [loading, setLoading] = useState(false);
 
     // create user
     const createUser = (email, password) =>{
+        setLoading(true);
       return  createUserWithEmailAndPassword(auth, email, password)
     }
 
@@ -44,7 +46,10 @@ const FirebaseProvider = ({children}) => {
         onAuthStateChanged(auth, (user) => {
             if (user) {
            setUser(user)
+           setLoading(false);
+           
             } 
+           
           });
     },[])
 
@@ -62,7 +67,7 @@ const FirebaseProvider = ({children}) => {
         
     }
     
-    const allValues ={createUser, signInUser, googleLogin, githubLogin, logout, user, userProfile }
+    const allValues ={createUser, signInUser, googleLogin, githubLogin, logout, user, userProfile, loading }
     return (
         <AuthContext.Provider value={allValues}>
             {children}

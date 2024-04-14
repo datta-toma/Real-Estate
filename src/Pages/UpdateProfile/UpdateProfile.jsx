@@ -1,5 +1,6 @@
 import { useState } from "react";
 import useAuth from "../../hooks/useAuth";
+import { Helmet } from "react-helmet-async";
 
 
 const UpdateProfile = () => {
@@ -13,6 +14,9 @@ const UpdateProfile = () => {
     }
     return (
         <div>
+          <Helmet>
+            <title>Update Profile</title>
+          </Helmet>
             <div className="card shrink-0 w-full max-w-sm shadow-2xl bg-base-100">
       <form onSubmit={handleSubmit} className="card-body">
         <div className="form-control">

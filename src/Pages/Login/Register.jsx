@@ -1,7 +1,7 @@
 
-import { Link } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import { useForm } from "react-hook-form";
-// import Result from "postcss/lib/result";
+import { FaEyeSlash, FaEye  } from "react-icons/fa";
 import SocialLogin from "./SocialLogin";
 import useAuth from "../../hooks/useAuth";
 import Swal from "sweetalert2";
@@ -12,6 +12,11 @@ const Register = () => {
 
     const {createUser} = useAuth();
     const [error, setError] = useState(null);
+    const [showPassword, setShowPassword] = useState(false);
+  
+    const navigate = useNavigate();
+    const location = useLocation();
+    const from = location?.state || "/"
     
     const {
         register,
@@ -21,9 +26,13 @@ const Register = () => {
       const onSubmit = (data) =>{
         const {email, password} = data
         createUser(email, password)
-        .then(result =>{
-          console.log(result);
-          console.log(error)
+        .then((result) =>{
+          if(result.user){
+            navigate(from);
+          }
+          // console.log(result);
+          // console.log(error)
+          // navigate("/")
           // Show success message using SweetAlert
        Swal.fire({
         icon: 'success',
@@ -31,6 +40,13 @@ const Register = () => {
         text: 'Login successfully!',
       });
         })
+        .catch((error) => {
+          Swal.fire({
+            icon: "error",
+            title: "Error",
+            text: error.message, 
+          });
+        });
       } 
 
 
@@ -78,10 +94,17 @@ const Register = () => {
                 <label className="label">
                   <span className="label-text">Password</span>
                 </label>
-                <input type="password" placeholder="password" className="input input-bordered" required
+                <div className="relative">
+                <input type={showPassword ? "text" : "password"} placeholder="password" className="input input-bordered" required
                 {...register("password", { required: true })}
-                 />
+                 /> <span className="absolute top-4 right-3" onClick={()=> setShowPassword(!showPassword)}>
+                 {
+                  showPassword ? <FaEye></FaEye> :  <FaEyeSlash></FaEyeSlash>
+                 }
+                  </span>
                  {errors.password && <span>This field is required</span>}
+                </div>
+                
 
               </div>
               <div className="form-control mt-6">

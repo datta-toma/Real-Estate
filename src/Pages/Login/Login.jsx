@@ -1,5 +1,5 @@
 
-import { Link } from "react-router-dom";
+import { Link,  useNavigate, useLocation } from "react-router-dom";
 import { useForm } from "react-hook-form";
 import useAuth from "../../hooks/useAuth";
 import SocialLogin from "./SocialLogin";
@@ -11,7 +11,12 @@ import "./Login.css";
 const Login = () => {
   const {signInUser} = useAuth();
   const [error, setError] = useState(null);
- 
+
+
+
+   const navigate = useNavigate();
+    const location = useLocation();
+    const from = location?.state || "/"
 
       const {
         register,
@@ -22,8 +27,12 @@ const Login = () => {
         const {email, password} = data;
 
           signInUser(email, password)
-          .then(result =>{
-            console.log(result.user);
+          .then((result) =>{
+            if(result.user){
+              navigate(from);
+            }
+            // console.log(result.user);
+            // navigate("/")
           })
     
           .catch(error =>{
