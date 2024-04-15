@@ -21,6 +21,13 @@ const FirebaseProvider = ({children}) => {
       return  createUserWithEmailAndPassword(auth, email, password)
     }
 
+    // update Profile
+    const updateUserProfile = (name, image) =>{
+       return updateProfile(auth.currentUser, {
+            displayName: name, photoURL: image
+          })
+    }
+
     // sin in user
     const signInUser = (email, password) =>{
         setLoading(true);
@@ -61,21 +68,8 @@ const FirebaseProvider = ({children}) => {
           return () => unsubscribe();
     },[]);
 
-    // update profile
-    const userProfile = async (email, photoURL) =>{
-        
-        updateProfile(auth.currentUser, {
-            email, photoURL
-          });
-
-          setUser({
-            ...user, email, photoURL
-          });
-          console.log('profile update successfully');
-        
-    }
     
-    const allValues ={createUser, signInUser, googleLogin, githubLogin, logout, user, userProfile, loading}
+    const allValues ={createUser, signInUser, googleLogin, githubLogin, logout, user, updateUserProfile, loading}
     return (
         <AuthContext.Provider value={allValues}>
             {children}

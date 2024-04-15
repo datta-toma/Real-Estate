@@ -49,7 +49,7 @@ const Navbar = () => {
        <div className="navbar-end ">
         {
           user? <div className=" flex   gap-3 dropdown dropdown-end">
-          <label tabIndex={0} className="btn btn-ghost btn-circle avatar tooltip  tooltip-left" data-tip={user.email}>
+          <label tabIndex={0} className="btn btn-ghost btn-circle avatar tooltip  tooltip-left" data-tip={user?.displayName  || user.email} >
 
               <div className="w-10 rounded-full">
                   <img src={user?.photoURL || "https://i.postimg.cc/c4RMWFc4/unnamed.png" } />
