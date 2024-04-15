@@ -6,9 +6,9 @@ import { Navigate, useLocation } from 'react-router-dom';
 const PrivateRoute = ({children}) => {
     const {user, loading} = useAuth();
     const location = useLocation();
-    console.log(location)
+
     if(loading){
-        return <span className=" ml-96 mt-8 loading loading-ring loading-lg"></span>
+        return <span className="loading ml-96 loading-ring loading-lg"></span>
     }
 
     if (!user){

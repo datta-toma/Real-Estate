@@ -12,26 +12,30 @@ import { useEffect } from "react";
 const FirebaseProvider = ({children}) => {
     const [user, setUser] = useState(null)
     
-    const [loading, setLoading] = useState(false);
+    const [loading, setLoading] = useState(true);
+    console.log(loading)
 
     // create user
     const createUser = (email, password) =>{
-        setLoading(true);
+      setLoading(true);
       return  createUserWithEmailAndPassword(auth, email, password)
     }
 
     // sin in user
     const signInUser = (email, password) =>{
+        setLoading(true);
         return signInWithEmailAndPassword(auth, email, password)
     }
 
     // google login
     const googleLogin = () =>{
+        setLoading(true);
         return signInWithPopup(auth, googleProvider)
     }
 
     // github login
     const githubLogin = () =>{
+        setLoading(true);
         return signInWithPopup(auth, githubProvider)
     }
 
@@ -43,15 +47,19 @@ const FirebaseProvider = ({children}) => {
 
     // observable
     useEffect(() =>{
-        onAuthStateChanged(auth, (user) => {
-            if (user) {
-           setUser(user)
-           setLoading(false);
-           
-            } 
+       const unsubscribe = onAuthStateChanged(auth, (user) => {
+        if (user) {
+            setUser(user);
+            setLoading(false);
+          }
+          else {
+            setUser(null);
+            setLoading(false);
+          }
            
           });
-    },[])
+          return () => unsubscribe();
+    },[]);
 
     // update profile
     const userProfile = async (email, photoURL) =>{
@@ -67,7 +75,7 @@ const FirebaseProvider = ({children}) => {
         
     }
     
-    const allValues ={createUser, signInUser, googleLogin, githubLogin, logout, user, userProfile, loading }
+    const allValues ={createUser, signInUser, googleLogin, githubLogin, logout, user, userProfile, loading}
     return (
         <AuthContext.Provider value={allValues}>
             {children}

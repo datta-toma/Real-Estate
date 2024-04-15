@@ -10,7 +10,7 @@ const SocialLogin = () => {
     
     const navigate = useNavigate();
     const location = useLocation();
-    const from = location?.state || "/"
+    const from = location?.state || "/";
 
     const handleSocialLogin = socialProvider =>{
         socialProvider()

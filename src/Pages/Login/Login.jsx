@@ -1,5 +1,5 @@
 
-import { Link,  useNavigate, useLocation } from "react-router-dom";
+import { Link,  useLocation,  useNavigate } from "react-router-dom";
 import { useForm } from "react-hook-form";
 import useAuth from "../../hooks/useAuth";
 import SocialLogin from "./SocialLogin";
@@ -16,7 +16,7 @@ const Login = () => {
 
    const navigate = useNavigate();
     const location = useLocation();
-    const from = location?.state || "/"
+    const from = location?.state || "/";
 
       const {
         register,
