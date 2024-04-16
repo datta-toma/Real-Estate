@@ -5,8 +5,9 @@ import { FaEyeSlash, FaEye  } from "react-icons/fa";
 import SocialLogin from "./SocialLogin";
 import useAuth from "../../hooks/useAuth";
 import Swal from "sweetalert2";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import "./Login.css";
+import AOS from 'aos';
 
 const Register = () => {
 
@@ -49,11 +50,18 @@ const Register = () => {
         });
       } 
 
+      useEffect(() => {
+        // Initialize AOS when the component mounts
+        AOS.init();
+    }, []);
+
 
     return (
         <div className="hero  SinIn-container">
         <div className="hero-content flex-col lg:flex-row-reverse">
-          <div className="card shrink-0 w-full max-w-sm shadow-2xl bg-base-100 mt-10">
+          <div className="card shrink-0 w-full max-w-sm shadow-2xl bg-base-100 mt-10"  data-aos="flip-left"
+        data-aos-easing="ease-out-cubic"
+        data-aos-duration="2000" >
             <form onSubmit={handleSubmit(onSubmit)} className="card-body">
 
             <div className="form-control">

@@ -1,15 +1,22 @@
 import { Helmet } from "react-helmet-async";
 import { MapContainer, TileLayer, Marker, Popup } from "react-leaflet";
 import "leaflet/dist/leaflet.css";
+import AOS from 'aos';
+import { useEffect } from "react";
 
 const ContactUs = () => {
+    useEffect(() => {
+        // Initialize AOS when the component mounts
+        AOS.init();
+    }, []);
+
     return (
         <div>
             <Helmet>
                 <title>Contact Us</title>
             </Helmet>
             <div className="flex flex-col md:flex-row gap-14 justify-center mt-28">
-                <div className="w-80">
+                <div className="w-80" data-aos="zoom-out-right">
                     
                         <MapContainer center={[51.505, -0.09]} zoom={13} style={{ height: "400px" }}>
                     <TileLayer
@@ -26,7 +33,7 @@ const ContactUs = () => {
                 
                 </div>
 
-                <div>
+                <div data-aos="zoom-out-left">
                     <h2 className="text-5xl font-bold">Contact Information</h2>
                     <div className="mt-10">
                         <div className="text-xl font-medium shadow-2xl rounded-lg p-4">
